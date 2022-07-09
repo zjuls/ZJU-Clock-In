@@ -97,7 +97,7 @@ class ClockIn(object):
             raise RegexMatchError('Relative info not found in html with regex')
         except json.decoder.JSONDecodeError:
             raise DecodeError('JSON decode error')
-
+        print(old_info)
         new_info = old_info.copy()
         new_info['id'] = new_id
         new_info['name'] = name
